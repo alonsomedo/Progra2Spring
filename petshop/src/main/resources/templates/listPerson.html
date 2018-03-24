@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List Of Persons</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>PersonId</td>
+			<td>Nombre</td>
+			<td>Apellidos</td>
+			<td>Direccion</td>
+			<td>Ciudad</td>
+			<td>Telefono</td>
+			<td>Email</td>
+		</tr>
+		<tr th:each="person : ${persons}">
+			<td th:text="${person.id}"></td>
+			<td th:text ="${person.firstName}"></td>
+			<td th:text ="${person.lastName}"></td>
+			<td th:text ="${person.adress}"></td>
+			<td th:text ="${person.city}"></td>
+			<td th:text ="${person.phone}"></td>
+			<td th:text ="${person.email}"></td>
+		</tr>
+	</table>
+</body>
+</html>
